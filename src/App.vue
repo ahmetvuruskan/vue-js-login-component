@@ -1,16 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+<login
+    :title="title"
+    :text="text"
+    :login="login"
+    :password="password"
+    :rememberMe ="rememberMe"
+    :forgotPassword = "forgotPassword"
+></login>
+</div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Login from "@/components/Login";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    login : Login
+  },
+  data : function (){
+    return {
+      title : "Sign in",
+      text : "Sign in and managing your candidates!",
+      login: "Login",
+      password: "Password",
+      rememberMe : "Remember Me",
+      forgotPassword :"Forgot Password ? "
+    }
   }
+
 }
 </script>
 
